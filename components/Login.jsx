@@ -3,8 +3,7 @@ import React, { Component } from 'react'
 import {Ionicons} from '@expo/vector-icons'
 import Color from '../assets/utils/Color'
 
-export default class Login extends Component {
-    render() {
+export default Login = () => {
         return (
             <View style={{alignContent: 'center'}}>
                 <Image source={require('../assets/images/login-illustration.png')} style={styles.imageContainer} />
@@ -22,7 +21,7 @@ export default class Login extends Component {
                 </View>
             </View>
         )
-    }
+    
 }
 
 const styles = StyleSheet.create({
