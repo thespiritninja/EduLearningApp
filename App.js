@@ -1,16 +1,34 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import OnboardingScreen from './components/Onboarding';
 import Login from './components/Login';
+import { AuthContext } from './services/AuthContext';
+import Home from './components/Home';
+import Utils from './services/Utils';
 export default function App() {
   const [moveToLogin, setMoveToLogin] = useState(null);
+  const [userData, setUserData] = useState();
+  useEffect(()=>{
+    Utils.getUserAuth().then(res=>{
+       if(res){
+        setUserData(res);
+        setMoveToLogin(true);
+       }
+       else{
+        setUserData(null);
+       }
+    })
+  },[])
   return (
-    <View style={styles.container}>
+    <AuthContext.Provider value={{userData, setUserData}}>
+      <View style={styles.container}>
       {!moveToLogin ? 
         <OnboardingScreen setMoveToLogin={setMoveToLogin} /> : 
-        <Login />}
+        <>{userData ? (<Home setMoveToLogin={setMoveToLogin}/>) : (<Login />) }</>
+        }
     </View>
+    </AuthContext.Provider>
   );
 }
 
