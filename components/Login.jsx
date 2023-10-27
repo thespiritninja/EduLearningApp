@@ -15,8 +15,8 @@ export default Login = () => {
     const [userInfo, setUserInfo] = useState();
     const {userData, setUserData} = useContext(AuthContext);
     const [request, response, promptAsync] = Google.useAuthRequest({
-        clientId: CLIENT_ID,
-        iosClientId: IOS_ID
+        clientId: process.env.CLIENT_ID,
+        iosClientId: process.env.IOS_ID
     })
     useEffect(() => {
         if (response?.type === "success") {
