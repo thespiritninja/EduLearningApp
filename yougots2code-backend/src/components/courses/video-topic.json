@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_courses_video_topics",
+  "info": {
+    "displayName": "videoTopic",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    },
+    "rank": {
+      "type": "integer"
+    }
+  }
+}

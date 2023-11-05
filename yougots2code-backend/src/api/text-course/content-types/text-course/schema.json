@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "text_courses",
+  "info": {
+    "singularName": "text-course",
+    "pluralName": "text-courses",
+    "displayName": "TextCourse"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "database",
+        "networking",
+        "cloud",
+        "AI-ML"
+      ]
+    },
+    "courses": {
+      "type": "component",
+      "repeatable": true,
+      "component": "courses.text-topic"
+    }
+  }
+}

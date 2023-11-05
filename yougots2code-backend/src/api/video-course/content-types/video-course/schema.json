@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_courses",
+  "info": {
+    "singularName": "video-course",
+    "pluralName": "video-courses",
+    "displayName": "VideoCourse"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "courses": {
+      "displayName": "videoTopic",
+      "type": "component",
+      "repeatable": false,
+      "component": "courses.video-topic"
+    }
+  }
+}
