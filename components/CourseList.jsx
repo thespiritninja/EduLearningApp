@@ -19,7 +19,6 @@ export default function CourseList({courseType}) {
         setTextCourse(textCoursesJSON);
     }
     const navigateToDetails = (courseDetails)=>{
-        console.log('Course Cliked');
         navigator.navigate('course-detail',{courseData:courseDetails});
     }
     useEffect(()=>{
