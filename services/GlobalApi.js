@@ -8,7 +8,7 @@ const axiosInstance = Axios.create({
   timeout: 10000, 
   headers: {
     'Content-Type': 'application/json', 
-    'Authorization': 'Bearer '+process.env.STRAPI_TOKEN
+    // 'Authorization': 'Bearer '+process.env.STRAPI_TOKEN
   },
 });
 

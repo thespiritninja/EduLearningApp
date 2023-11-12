@@ -11,7 +11,7 @@ export default function VideoCourseList() {
             id: item.id,
             title: item.attributes.title,
             desc: item.attributes.description,
-            courses: item.attributes.videoTopic,
+            courses: item.attributes.courses,
             image: `https://shark-app-fxz4g.ondigitalocean.app${item.attributes.image.data.attributes.url}`
         }))
         setVideoCourses(videCoursesJSON);
