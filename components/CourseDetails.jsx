@@ -16,7 +16,7 @@ export default function CourseDetails() {
         <TouchableOpacity onPress={()=>navigator.goBack()}>
         <Ionicons name="ios-arrow-back-sharp" size={27} color="black" />
         </TouchableOpacity>
-      <View>
+      <View style={{marginBottom: 30}}>
         <Text style={styles.courseName}>{course.name}</Text>
         <Text style={{color: Color.gray}}>Courtsey: Medium</Text>
         <Image source={{uri: course.image}} style={styles.imgStyle} />

@@ -25,6 +25,7 @@ const Home = ({ route }) => {
                 <VideoCourseList />
                 <CourseList courseType={'database'} />
                 <CourseList courseType={'AI-ML'} />
+                <CourseList courseType={'cloud'} />
             <Button title='Logout' onPress={() => {
                 handleLogout()
             }} />
