@@ -22,7 +22,7 @@ export default function CourseDetails() {
         <Image source={{uri: course.image}} style={styles.imgStyle} />
         <Text style={styles.aboutStyle}>About Course</Text>
         <Text numberOfLines={5} style={{color: Color.gray}}>{course.desc}</Text>
-        <CourseContent course={course}/>
+        <CourseContent course={course} courseType={param.courseType}/>
       </View>
     </View>
   )

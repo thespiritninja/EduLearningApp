@@ -18,7 +18,7 @@ export default function VideoCourseList() {
         setVideoCourses(videCoursesJSON);
     }
     const navigateToDetails = (courseDetails)=>{
-        navigator.navigate('course-detail',{courseData:courseDetails});
+        navigator.navigate('course-detail',{courseData:courseDetails, courseType:'video'});
     }
     useEffect(()=>{
         getVideoCourseList();

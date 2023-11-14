@@ -3,10 +3,15 @@ import React from 'react'
 import Color from '../assets/utils/Color'
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-export default function CourseContent({course}) {
+export default function CourseContent({course, courseType}) {
     const navigator = useNavigation();
     const navigateToChapter = (content) => {
-        navigator.navigate('course-chapter',{courseContent: content});
+        if(courseType == 'text'){
+            navigator.navigate('course-chapter',{courseContent: content});
+        }
+        else{
+            navigator.navigate('play-video',{courseContent: content});
+        }
     }
   return (
     <View style={{marginTop:10}}>

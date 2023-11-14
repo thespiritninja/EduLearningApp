@@ -19,7 +19,7 @@ export default function CourseList({courseType}) {
         setTextCourse(textCoursesJSON);
     }
     const navigateToDetails = (courseDetails)=>{
-        navigator.navigate('course-detail',{courseData:courseDetails});
+        navigator.navigate('course-detail',{courseData:courseDetails, courseType:'text'});
     }
     useEffect(()=>{
         getTextCourseList();
