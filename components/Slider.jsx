@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View, Image, Dimensions, FlatList } from 'react-native'
+import { StyleSheet, Text, View, Image, Dimensions, FlatList, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import axiosInstance from '../services/GlobalApi';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Slider() {
     const [slider, setSlider] = useState([]);
@@ -13,16 +14,17 @@ export default function Slider() {
         }))
         setSlider(slidersJSON);
     }
+    const navigator = useNavigation();
     useEffect(() => {
         getSliderData();
     }, [])
     return (
         <View style={{ marginTop: 10 }}>
             <FlatList data={slider} horizontal={true} showsHorizontalScrollIndicator={false} renderItem={({ item }) => (
-                <View>
+                <TouchableOpacity onPress={()=>{navigator.navigate('ads')}}>
                     <Image source={{ uri: item.image }} 
                     style={styles.styleImage} />
-                </View>
+                </TouchableOpacity>
             )} />
         </View>
     )

@@ -6,6 +6,7 @@ import CourseDetails from './CourseDetails';
 import CourseChapter from './CourseChapter';
 import PlayVideo from './PlayVideo';
 import Profile from './Profile';
+import AdsPage from './AdsPage';
 const Stack = createNativeStackNavigator();
 export default function HomeNavigation({setMoveToLogin}) {
   return (
@@ -15,6 +16,7 @@ export default function HomeNavigation({setMoveToLogin}) {
         <Stack.Screen name='course-chapter' component={CourseChapter}></Stack.Screen>
         <Stack.Screen name='play-video' component={PlayVideo}></Stack.Screen>
         <Stack.Screen name='profile' component={Profile} initialParams={{setMoveToLogin: setMoveToLogin}}></Stack.Screen>
+        <Stack.Screen name='ads' component={AdsPage}></Stack.Screen>
     </Stack.Navigator>
   )
 }

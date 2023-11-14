@@ -9,7 +9,7 @@ import CourseList from './CourseList'
 const Home = () => {
     const { userData, setUserData } = useContext(AuthContext);
     return (
-        <View style={{ padding: 20 }}>
+        <View style={{ paddingVertical: 15, paddingHorizontal: 10 }}>
             <ScrollView style={{ padding: 10 }}>
                 <WelcomeHeader />
                 <Slider />
